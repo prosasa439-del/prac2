@@ -6,7 +6,6 @@ using System.Text;
 
 namespace CatKennel;
 
-/// <summary>Порода кота. Раньше была enum, теперь класс — чтобы породы можно было добавлять во время работы.</summary>
 public class Breed
 {
     public string Name { get; }
@@ -22,7 +21,6 @@ public class Breed
     public override string ToString() => Name;
 }
 
-/// <summary>Справочник пород. Содержит стандартные породы и позволяет добавлять новые.</summary>
 public static class BreedCatalog
 {
     public const int MaxNameLength = 30;
@@ -38,7 +36,6 @@ public static class BreedCatalog
     public static IReadOnlyList<Breed> All => _breeds.AsReadOnly();
     public static Breed Default => _breeds[0];
 
-    /// <summary>Пытается добавить породу. При ошибке возвращает false и текст причины.</summary>
     public static bool TryAdd(string name, out string error)
     {
         name = name?.Trim();
