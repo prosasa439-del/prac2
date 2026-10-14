@@ -20,7 +20,6 @@ public class PetHouse : IPetHouse
     public IReadOnlyList<Animal> Animals => _animals.AsReadOnly();
     public int Count => _animals.Count;
 
-    /// <summary>Добавляет животное. false — если null или оно уже в домике.</summary>
     public bool AddAnimal(Animal animal)
     {
         if (animal == null || _animals.Contains(animal))
