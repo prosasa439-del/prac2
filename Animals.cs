@@ -79,10 +79,8 @@ public class Cat : Animal
         set => _age = value < 0 ? 0 : value;
     }
 
-    /// <summary>Максимально допустимый возраст (используется при проверке ввода).</summary>
     public virtual int MaxAge => 30;
 
-    /// <summary>Подпись единицы возраста для отображения в запросах.</summary>
     public virtual string AgeText => $"{Age} {GetAgeSuffix(Age)}";
 
     public Cat() : base()
@@ -153,7 +151,7 @@ public class Kitten : Cat
     public Kitten(string name, int age, Weight weight, Breed breed)
         : base(name, age, weight, breed) { }
 
-    public override int MaxAge => 12;                 // котёнок — до 12 месяцев
+    public override int MaxAge => 12;
     public override string AgeText => $"{Age} мес.";
 
     public override void Play()
