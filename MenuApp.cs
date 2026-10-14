@@ -6,7 +6,6 @@ using System.Text;
 
 namespace CatKennel;
 
-/// <summary>Главное меню приложения.</summary>
 public class MenuApp
 {
     private Cat _currentCat;
@@ -104,7 +103,6 @@ public class MenuApp
     }
 }
 
-/// <summary>Диалог создания кота / котёнка.</summary>
 public static class CatCreator
 {
     public static Cat Create()
@@ -132,7 +130,6 @@ public static class CatCreator
     }
 }
 
-/// <summary>Просмотр профиля и действия с котом.</summary>
 public static class CatActions
 {
     public static void ShowProperties(Cat cat)
@@ -194,7 +191,6 @@ public static class CatActions
     }
 }
 
-/// <summary>Выбор существующей породы и добавление новой.</summary>
 public static class BreedSelector
 {
     public static Breed Select()
