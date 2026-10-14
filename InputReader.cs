@@ -6,7 +6,6 @@ using System.Text;
 
 namespace CatKennel;
 
-/// <summary>Безопасное чтение данных с консоли: повторяет запрос, пока ввод не станет корректным.</summary>
 public static class InputReader
 {
     public static string ReadString(string prompt, int maxLength = 50, bool allowEmpty = false)
